@@ -1,0 +1,80 @@
+@import '../../styles/shared.scss';
+
+
+// 404 page container
+.container {
+  text-align: center;
+  
+}
+
+// Image container
+.thumb {
+  margin: 0 auto;
+
+  max-width: 200px;
+
+  @media screen and (min-width: $mobile) {
+    max-width: 320px;
+  }
+}
+
+// Main image on page
+.image {
+  max-width: 100%;
+  margin-bottom: 15px;
+
+  animation: spin 12s infinite cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+// Error description
+.text {
+  margin-bottom: 25px;
+  color: $border-color;
+
+}
+
+// Home button
+.button {
+  padding: 10px;
+
+  border: 0px solid transparent;
+  border-radius: 4px;
+
+  text-decoration: none;
+
+  color: $clear-color;
+  background-color: $main-color;
+
+  box-shadow: $main-shadow;
+
+  opacity: 1;
+  transition: opacity $transition-duration $timing-function;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+
+    transition: opacity $transition-duration $timing-function;
+  }
+
+  &:disabled {
+    background-color: $inactive-color;
+    cursor: auto;
+  }
+}
+
+// Animation for image
+@keyframes spin {
+ 0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+}
