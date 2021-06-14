@@ -28,7 +28,7 @@ const UserMenu = ({ email, onLogOut }) => (
       onClick={onLogOut}
       className={styles.button}
     >
-      <LogOutBtn width="35px" height="35x" fill="#a7a1a1"/>
+      <LogOutBtn width="35px" height="35px" fill="#a7a1a1"/>
     </button>
   </div>
 );
